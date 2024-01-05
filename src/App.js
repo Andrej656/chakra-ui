@@ -1,39 +1,33 @@
+// App.js
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { ChakraProvider, Container } from '@chakra-ui/react';
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Button from './components/Button';
+import Progress from './components/Progress';
+import Switch from './components/Switch';
+import Link from './components/Link';
+
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+    <ChakraProvider>
+      <Header />
+
+      <Container maxW="container.lg" mt="8">
+        <About />
+        <Projects />
+        <Contact />
+
+        {/* Sample Chakra UI components */}
+        <Button onClick={() => console.log('Button clicked!')}>
+          Click me
+        </Button>
+        <Switch />
+        <Progress value={75} />
+        <Link href="https://example.com">Click here</Link>
+      </Container>
     </ChakraProvider>
   );
 }
