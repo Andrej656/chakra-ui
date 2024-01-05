@@ -1,4 +1,4 @@
-// Header.tsx
+// Header section page 
 import { Box, Flex, Link, Heading } from '@chakra-ui/react';
 
 const Header = () => {

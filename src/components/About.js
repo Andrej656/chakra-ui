@@ -1,4 +1,4 @@
-// About.tsx
+// About section on one-page design of website
 import { Box, Heading, Text } from '@chakra-ui/react';
 
 const About = () => {

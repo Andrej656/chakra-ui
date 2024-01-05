@@ -1,4 +1,4 @@
-// Contact.tsx
+// Contact section page 
 import { Box, Heading, Text } from '@chakra-ui/react';
 
 const Contact = () => {
